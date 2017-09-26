@@ -8,17 +8,21 @@ export default class SearchBar extends Component {
             term: ''
         }
         this.onInputChange = this.onInputChange.bind(this);
+        this.onFormSubmit = this.onFormSubmit.bind(this);
 
     }
 
+    onFormSubmit(event){
+        event.preventDefault();
+    }
+
     onInputChange(event){
-        console.log(event.target.value);
         this.setState({term: event.target.value})
     }
 
     render(){
         return (
-            <form>
+            <form onSubmit={this.onFormSubmit}>
                 <input
                     placeholder='get a five-day forecast'
                     value={this.state.term}
