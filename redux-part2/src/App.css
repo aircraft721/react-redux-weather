@@ -26,5 +26,13 @@
 .table-one {
   width: 900px;
   margin: 0 auto;
+}
 
+td, th {
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+svg {
+  height: 120px;
 }
